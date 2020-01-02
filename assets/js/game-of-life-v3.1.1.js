@@ -86,7 +86,7 @@
       //{ columns : 100, rows : 48, cellSize : 8 },
       {
         columns : 180,
-        rows : 150,
+        rows : 200,
         cellSize : 10
       }
       ]
