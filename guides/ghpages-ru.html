@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            shoraii's guides - GitHub Pages
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              },
+              svg: {
+                fontCache: 'global'
+              }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../assets/css/shoraiitheme.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/projstyle.css"/>
+        
+        <style>
+                body {
+                background-color: #0f111a
+                }
+                a, a:active, a:visited {
+                color: white;
+                }
+                a:hover{
+                background-color:#ffffff;
+                }
+            </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <div class="container tt text-white">
+            <h3><a href="guides/ghpages.html">Создание своего сайта при помощи GitHub Pages</a></h3>
+            <br>
+            <h4><i>Введение</i></h4>
+            <p>
+                В данной инструкции будет описан алгоритм создания своего сайта при помощи GitHub Pages на основе своего репозитория в GitHub. 
+                Этот гайд полезен, если требуется сделать сайт со статическим содержанием, т.е. после запуска сайта невозможно поменять его содержимое, и для изменений нужно перезапустить его, а также, например, не требуется использовать базы данных. 
+                Для полного понимания приведена таблица с хорошими и плохими кейсами.
+            </p>
+            <table style="width:100%">
+                <tr>
+                  <th>Хорошо</th>
+                  <th>Плохо</th>
+                </tr>
+                <tr>
+                  <td><p>Страница о сервере Minecraft, содержащая важную информацию, правила и новости. Также есть список интересных <a href="https://minecraft.gamepedia.com/Schematic_file_format"><i>schematic</i></a>’ов. Вся информация редактируется только администраторами.</p></td>
+                  <td><p>Страница о сервере Minecraft с функцией входа в аккаунт, новости с возможностью комментирования, список <a href="https://minecraft.gamepedia.com/Schematic_file_format"><i>schematic</i></a>'ов, который можно изменить прямо на сайте.</p></td>
+                </tr>
+            </table>
+            На протяжении всего гайда к каждому шагу будет добавлена сложность &mdash; от тривиальной (0) до невыносимо сложной (10).
+            <br>
+            <br>
+            <h4><i>0. Создание аккаунта GitHub (1)</i></h4>
+            <p>
+                Заходим на <a href="https://github.com">GitHub</a>, создаем аккаунт, подтверждаем ящик.
+                <br>
+                <br>
+                <img src="img/gh1.png" class="rounded border border-info" width="70%">
+            </p>
+            <br>
+            <h4><i>1. Создаем репозиторий (2)</i></h4>
+            <p>
+                Идем на github.com, находим справа сверху знак <b>+</b>, жмем на него, затем на New repository.
+                <br>
+                <br>
+                <img src="img/gh2.png" class="rounded border border-info" width="20%">
+                <br>
+                <br>
+                В появившейся форме заполняем нужные поля: Repository name &mdash; название репозитория (оно будет использовано в названии страницы), Description &mdash; описание, оно будет написано на странице репозитория.
+                Оставляем репозиторий публичным (любой желающий сможет посмотреть код сайта), отмечаем пункт Initialize this repository with a README. Жмем на Create repository.
+                <br>
+                <br>
+                <img src="img/gh3.png" class="rounded border border-info" width="50%">
+                <br>
+            </p>
+            <br>
+            <h4><i>2. Подключаем GitHub Pages к репозиторию (1)</i></h4>
+            <p>
+                В появившейся странице идем сразу в Settings 
+                <br>
+                <br>
+                <img src="img/gh4.png" class="rounded border border-info" width="70%">
+                <br>
+                <br>
+                и мотаем вниз до пункта GitHub Pages. В подпункте Source выбираем master branch.
+                <br>
+                <br>
+                <img src="img/gh5.png" class="rounded border border-info" width="70%">
+                <br>
+                <br>
+                ...и всё? Технически, да. Только что созданная страница готова к посещению, она будет иметь вид author.github.io/repository-name.
+            </p>
+            <br>
+            <h4><i>3. Выбираем тему сайта (необязательно) (3)</i></h4>
+            <p>
+                Мы можем добавить одну из заранее приготовленных тем к новоиспеченному сайту.
+                Это можно сделать в подпункте Theme Chooser.
+                А можем не добавлять, при этом страница будет выглядеть минималистично и не так уж уродилво.
+                <br>
+                <br>
+                <img src="img/gh6.png" class="rounded border border-info" width="70%">
+                <br>
+                <br>
+                Первая тема выглядит достаточно хорошо, я буду использовать её.
+                Выбрав тему жмем на Select theme, и перед нами предстает стена кода на непонятном языке.
+                Пока что игнорируем ее, идем вниз и жмем на Commit changes.
+                <br>
+                <br>
+                <img src="img/gh7.png" class="rounded border border-info" width="70%">
+                <br>
+                <small>Бонусный квест (8): разобраться, что находится над кнопкой Commit changes</small>
+                <br>
+                Теперь, если мы перейдем на страницу нашего сайта, то мы увидим, что действительно тема была применена.
+                <br>
+                <br>
+                <img src="img/gh8.png" class="rounded border border-info" width="70%">
+            </p>
+            <br>
+            <h4><i>4. Редактируем текст (необязательно) (4)</i></h4>
+            <p>
+                Если нужно быстро отредактировать страницу, не зная HTML и Javascript, то достаточно разобраться в форматировании текста. Но при этом изменить что-либо, кроме текста не выйдет.
+                Находим на нашей странице ссылку editor on GitHub, жмем по ней, и перед нами вновь появляется стена кода.
+                Самое время в ней разобраться.
+                Это текст, использующий язык разметки <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>.
+                Он позволяет быстро <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">форматировать текст</a>, а также добавлять и редактировать таблицы.
+                <br>
+                <br>
+                <img src="img/gh9.png" class="rounded border border-info" width="70%">
+            </p>
+            <br>
+            <h4><i>5. Добавляем разработчиков (1)</i></h4>
+            <p>
+                Допустим, что мы не знаем, как сделать сайт со своей темой и гораздо более красивым, но знаем людей, которые могут справиться с этой задачей.
+                Тогда надо дать им возможность редактировать содержимое репозитория.
+                Для того, чтобы это сделать, идем на страницу репозитория, далее в настройки, слева выбираем Manage access, и нажимаем на зеленую кнопку Invite a collaborator
+                <br>
+                <br>
+                <img src="img/gh10.png" class="rounded border border-info" width="70%">
+                <br>
+                <br>
+                Пишем юзернейм нужного разработчика и приглашаем его в репозиторий. Теперь он может менять его содержимое.
+            </p>
+            <br>
+            <h4><i>6. Получаем свой домен! (6)</i></h4>
+            <p>
+                author.github.io/repo выглядит гораздо хуже, чем my-domain.me или epicdomain.tech. GitHub Pages позволяет использовать свой домен, но для этого нам надо его получить.
+                Можно приобрести домен, а можно его получить бесплатно. Как? При помощи GitHub Education Pack. Проходим по ссылке, авторизируемся и следуем инструкциям.
+                Чтобы получить набор, надо подтвердить статус учащегося. Для этого достаточно указать и подтвердить свою корпоративную почту и, если потребуется, 
+                предъявить свой студенческий билет. После успешного подтверждения идем на nc.me, пишем домен, который мы хотим получить, берем его (который кончается на .me), 
+                если он не занят, подтверждаем заказ. Далее выбираем опцию GitHub Pages, и вписываем главный ящик GitHub. Чтобы узнать, какой ящик главный, идем сюда, 
+                и находим надпись Primary. Она находится напротив главного ящика.
+                <br>
+                <br>
+                <img src="img/gh11.png" class="rounded border border-info" width="70%">
+                <br>
+                <br>
+                Жмем на Finish Up, и мы получили бесплатный домен .me на 1 год! Теперь мы можем его использовать в своем репозитории.
+                Идем в настройки репозитория, мотаем вниз до GitHub Pages, и в поле Custom domain выписываем наш домен. Готово. Теперь наш сайт доступен по домену.
+            </p>
+        </div>
+    </body>
+</html>
+
