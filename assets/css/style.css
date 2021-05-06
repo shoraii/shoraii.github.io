@@ -33,11 +33,13 @@ a{
 	bottom: 0;
 	right: 0;
 
-	min-width: 400px;
-	min-height: 415px;
+	min-width: 420px;
+	min-height: 330px;
 
-	width: 400px;
-	height: 415px;
+	width: 420px;
+	height: 330px;
 
 	text-align: center;
+
+	font-size: 26px;
 }
